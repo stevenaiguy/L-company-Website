@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lixel - Glasses-free 3D Floating Display</title>
+    <meta name="description" content="Lixel transforms medical images and 3D models into glasses-free floating visuals that users can view and control naturally with their hands.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .partners-banner {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 3rem 0;
+            background: rgba(10,10,15,0.5);
+            text-align: center;
+        }
+        .logo-row {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            opacity: 0.6;
+        }
+        .p-logo {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar glass">
+        <div class="container nav-content">
+            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Lixel Logo" class="logo-img"></a></div>
+            <div class="nav-links">
+                <a href="index.html" style="color: var(--text-main);">Home</a>
+                <a href="medical.html">Medical Solutions</a>
+                <a href="applications.html">Applications</a><a href="about.html">About</a>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Book a Demo</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="glow-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-text fade-up">
+                <div class="badge">Glasses-Free Display</div>
+                <h1>See, explain, and interact with <span class="text-gradient">3D information</span> in mid-air.</h1>
+                <p>Lixel transforms medical images and 3D models into immersive floating visuals you can control naturally with your hands. Overcome the limits of flat screens with air-touch interaction.</p>
+                <div class="hero-ctas">
+                    <a href="medical.html" class="btn btn-primary">Primary Use Cases</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-up" style="animation-delay: 0.2s;">
+                <div class="image-wrapper glass-border">
+                    <img src="images/hero.png" alt="Lixel Holographic Display">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Onboarding / Guide Section -->
+    <section class="onboarding" id="onboarding">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <h2>How It Works</h2>
+                <p>Experiencing LFIAT & LixelMeet</p>
+            </div>
+            
+            <div class="onboarding-cards">
+                <!-- Step 1 -->
+                <div class="card reveal">
+                    <div class="card-visual">
+                        <img src="images/see.png" alt="See it directly">
+                    </div>
+                    <div class="card-content">
+                        <div class="step-num">01 / See</div>
+                        <h3>See it directly, no glasses needed</h3>
+                        <p>Turn imaging and models into real floating holograms in space, revealing depth and structure instantly with our Light Field display.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="card reveal">
+                    <div class="card-visual">
+                        <img src="images/interact.png" alt="Interact naturally">
+                    </div>
+                    <div class="card-content">
+                        <div class="step-num">02 / Interact</div>
+                        <h3>Air-Touch interaction</h3>
+                        <p>Rotate, zoom, and dissect 3D content simply by using intuitive hand gestures. The LFIAT system makes manipulation more direct than any screen.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="card reveal">
+                    <div class="card-visual">
+                        <img src="images/collaborate.png" alt="Share and collaborate">
+                    </div>
+                    <div class="card-content">
+                        <div class="step-num">03 / Collaborate</div>
+                        <h3>LixelMeet</h3>
+                        <p>Sync understanding instantly. With LixelMeet, remote teams and classrooms can view the exact same 3D floating volume simultaneously.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Primary Solution Summary -->
+    <section style="padding: 8rem 0; background: #08080c;">
+        <div class="container text-center fade-up">
+            <h2 style="margin-bottom: 2rem;">Leading In Healthcare</h2>
+            <p style="max-width: 800px; margin: 0 auto 4rem; font-size:1.2rem;">Our technology is fundamentally transforming how complex medical data is communicated. From groundbreaking Medical Education to critical Doctor-Patient surgical briefing, we bridge the gap of spatial understanding.</p>
+            
+            <div class="image-wrapper glass-border" style="max-width:800px; margin: 0 auto 3rem;">
+                <img src="images/edu_card.png" alt="Medical Education">
+            </div>
+            <a href="medical.html" class="btn btn-outline">Explore Medical Solutions &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="partners-banner fade-up">
+        <div class="container">
+            <h4 style="color:var(--text-muted); font-weight:400;">Trusted by premier medical institutions in Taiwan</h4>
+            <div class="logo-row">
+                <div class="p-logo">Top Tier Hospitals</div>
+                <div class="p-logo">National Medical Schools</div>
+                <div class="p-logo">Research Centers</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section text-center" style="padding-top:6rem;">
+        <div class="container fade-up">
+            <div class="cta-box glass-panel mt-0" style="background: radial-gradient(circle at center, rgba(30,30,40,0.8) 0%, rgba(10,10,15,0.8) 100%);">
+                <h3>Ready to experience a new way of 3D communication?</h3>
+                <p>Talk to us about a demo, pilot project, or collaboration.</p>
+                <div class="hero-ctas justify-center">
+                    <a href="contact.html" class="btn btn-primary">Book a Demo</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid" style="grid-template-columns: 2fr 1fr 1fr 1fr;">
+                <div class="footer-brand">
+                    <h2>Lixel Inc.</h2>
+                    <p>Glasses-free 3D floating display and air-touch interaction.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <a href="index.html">Home</a>
+                    <a href="medical.html">Medical Solutions</a>
+                    <a href="applications.html">Applications</a><a href="about.html">About</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="contact.html">Contact / Demo</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Direct Contact</h4>
+                    <a href="mailto:info@lixelinc.com" class="email-link">info@lixelinc.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lixel Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

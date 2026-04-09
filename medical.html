@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Solutions - Lixel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar glass">
+        <div class="container nav-content">
+            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Lixel Logo" class="logo-img"></a></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="medical.html" style="color: var(--text-main);">Medical Solutions</a>
+                <a href="applications.html">Applications</a><a href="about.html">About</a>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Book a Demo</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding: 12rem 0 6rem; min-height: auto; background: url('images/about_hero.png') center / cover; position:relative;">
+        <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(4,4,6,0.6), #08080c);"></div>
+        <div class="container fade-up text-center" style="position:relative; z-index:2;">
+            <div class="badge">Healthcare Precision</div>
+            <h1>Empowering Medical Communication</h1>
+            <p style="max-width: 800px; margin: 0 auto;">Lixel provides glasses-free 3D floating visuals for medical education, doctor-patient communication, and advanced presurgical planning.</p>
+        </div>
+    </header>
+
+    <section class="split-section" style="padding-top: 4rem;">
+        <div class="container">
+            
+            <!-- Medical Education -->
+            <div class="split-grid fade-up" style="margin-bottom: 6rem; align-items:center;">
+                <div class="split-content">
+                    <h2>Medical Education</h2>
+                    <p>Help students build stronger anatomical understanding through interactive 3D floating visuals created directly from real imaging scan data and slice integration.</p>
+                    <p>Lixel gives educators a much more intuitive way to teach spatial relationships compared to flat texts, all while allowing them to preserve valuable, rare specimen-based teaching materials in a safe, reusable digital form.</p>
+                </div>
+                <div class="split-visual">
+                    <img src="images/edu_card.png" alt="Medical Education">
+                </div>
+            </div>
+
+            <!-- Doctor-Patient Communication -->
+            <div class="split-grid fade-up" style="margin-bottom: 6rem; align-items:center;">
+                <div class="split-visual" style="order: -1;">
+                    <img src="images/see.png" alt="Doctor-Patient Communication">
+                </div>
+                <div class="split-content">
+                    <h2>Doctor-Patient Communication</h2>
+                    <p>Use patient-specific scans and turn them into floating holograms to explain complex conditions, treatment plans, and necessary procedures in a clearer, more visual way.</p>
+                    <p>By replacing intimidating flat medical sketches or static 2D slice images with dynamic 3D interactive content, Lixel ensures patients and their families understand critical medical information with much greater confidence and trust in their physician.</p>
+                </div>
+            </div>
+
+            <hr style="border-color: var(--border-color); margin: 6rem 0; opacity: 0.5;">
+
+            <!-- Specialized Sub-Cases -->
+            <div class="vertical-cards fade-up" style="margin-top: 2rem; grid-template-columns: 1fr 1fr;">
+                <!-- Radiation Therapy -->
+                <div class="v-card" style="background: transparent;">
+                    <div class="v-card-img" style="height: 300px;">
+                        <img src="images/radiation.png" alt="Radiation Therapy">
+                    </div>
+                    <div class="v-card-body">
+                        <h4 style="color:var(--accent);">Radiation Therapy Eval</h4>
+                        <p>Evaluate target volumetric models and precise radiation dose distributions seamlessly in 3D mid-air. Lixel enables highly precise pre-operation visual tracking so oncology teams can thoroughly communicate impact fields.</p>
+                    </div>
+                </div>
+
+                <!-- Surgucial / Amputation Comm -->
+                <div class="v-card" style="background: transparent;">
+                    <div class="v-card-img" style="height: 300px;">
+                        <img src="images/collaborate.png" alt="Surgical Communication">
+                    </div>
+                    <div class="v-card-body">
+                        <h4 style="color:var(--accent);">Advanced Pre-operative Communication</h4>
+                        <p>Bring high-stakes situations like amputations, reconstructive surgeries, and major orthopedic procedures into 3D. Allow surgeons and patients to align completely on the exact extent of physical intervention before entering the OR.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Medical CTA -->
+    <section class="vision-section" style="padding: 6rem 0;">
+        <div class="container text-center fade-up">
+            <h2>Transform how your hospital communicates.</h2>
+            <div style="margin-top: 2rem;">
+                <a href="contact.html" class="btn btn-primary" style="margin-right: 1rem;">Book a Demo</a>
+                <a href="contact.html" class="btn btn-secondary">Discuss Partnerships</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Lixel Inc. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lixel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            position: relative;
+            padding: 12rem 0 8rem;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(4,4,6,0.6) 0%, #08080c 100%), 
+                        url('images/about_hero.png') no-repeat center center / cover;
+        }
+
+        /* CEO Card Specific Styles */
+        .ceo-section {
+            padding: 8rem 0;
+            background: #08080c;
+        }
+        .ceo-card {
+            display: flex;
+            background: #fff;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        .ceo-img-wrapper {
+            flex: 1;
+            min-height: 100%;
+            background: #333;
+            position: relative;
+            overflow: hidden;
+        }
+        .ceo-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: filter 0.3s ease;
+        }
+        .ceo-img-wrapper:hover img {
+            filter: blur(4px) brightness(0.6);
+        }
+        .ceo-hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(8, 8, 12, 0.7);
+            color: #fff;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .ceo-img-wrapper:hover .ceo-hover-overlay {
+            opacity: 1;
+        }
+        .ceo-hover-overlay ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .ceo-hover-overlay li {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .ceo-hover-overlay li::before {
+            content: '??;
+            color: #e86c2e;
+            position: absolute;
+            left: 0;
+        }
+        .ceo-text-wrapper {
+            flex: 1.2;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+        }
+        .ceo-text-wrapper h3 {
+            color: #e86c2e; /* Orange emphasis */
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+        .ceo-text-wrapper p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .ceo-title {
+            margin-top: 1rem;
+        }
+        .ceo-title strong {
+            color: #0d112b;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.2rem;
+            font-family: var(--font-heading);
+        }
+        .ceo-title span {
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .vision-block {
+            background: #fff;
+            color: #000;
+            padding: 8rem 0;
+            text-align: center;
+        }
+        .vision-block h2 {
+            color: #000;
+            font-size: 2.5rem;
+        }
+        .vision-block p {
+            color: #333;
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 900px) {
+            .ceo-card {
+                flex-direction: column;
+            }
+            .ceo-text-wrapper {
+                padding: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar glass">
+        <div class="container nav-content">
+            <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="Lixel Logo" class="logo-img"></a></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="medical.html">Medical Solutions</a>
+                <a href="applications.html">Applications</a>
+                <a href="about.html" style="color: var(--text-main);">About</a>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Book a Demo</a>
+        </div>
+    </nav>
+
+    <!-- 1. Hero -->
+    <header class="about-hero">
+        <div class="container fade-up" style="max-width: 900px; position: relative; z-index: 2;">
+            <div class="badge">About Lixel</div>
+            <h1 style="font-size: 3.5rem;">Freeing spatial intelligence from 2D screens.</h1>
+            <p style="font-size: 1.2rem; color: #ececf0;">Lixel develops glasses-free 3D floating display and mid-air interaction systems. We bridge the gap between human understanding and complex 3D data, making spatial communication faster, clearer, and far more intuitive.</p>
+        </div>
+    </header>
+
+    <!-- 2. Company intro -->
+    <section style="padding: 6rem 0; text-align: center; background: #040406;">
+        <div class="container fade-up">
+            <h3 style="color: var(--accent); margin-bottom: 1rem;">Turning 3D information into intuitive experience</h3>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--text-muted);">At Lixel, we believe complex spatial information should be easier to see, explain, and interact with. By combining display innovation with intuitive interaction, we create new ways for people to communicate and understand 3D content in real space.</p>
+        </div>
+    </section>
+
+    <!-- 3. CEO section -->
+    <section class="ceo-section">
+        <div class="container fade-up">
+            <div class="ceo-card">
+                <div class="ceo-img-wrapper">
+                    <img src="images/ceo.png" alt="Alex Yang, Founder & CEO">
+                    <div class="ceo-hover-overlay">
+                        <ul>
+                            <li>M.S. in Photonics, National Yang Ming Chiao Tung University</li>
+                            <li>15 years of experience in the semiconductor equipment industry</li>
+                            <li>Founder & CEO of Lixel Inc.</li>
+                            <li>Founder of Cheray Co., Ltd.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ceo-text-wrapper">
+                    <h3>The Story Behind Lixel</h3>
+                    <p>Alex Yang, Founder and CEO of Lixel, holds a master?™s degree in Photonic Engineering from National Yang Ming Chiao Tung University and brings more than fifteen years of experience in engineering R&D, marketing, and sales in the semiconductor equipment industry.</p>
+                    <p>He is also the co-inventor of 47 invention patents and 7 utility model patents, reflecting a strong foundation in technology development and innovation.</p>
+                    <p>Inspired by the potential of 3D floating image display technology, Alex co-founded Lixel in 2018 to develop glasses-free 3D floating image and mid-air interaction systems.</p>
+                    <p>Today, he leads a multidisciplinary team building integrated hardware and software platforms that make complex spatial information easier to see, explain, and interact with.</p>
+                    <div class="ceo-title">
+                        <strong>Alex Yang</strong>
+                        <span>Founder & CEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Why It Matters -->
+    <section style="padding: 8rem 0; background: #040406;">
+        <div class="container">
+            <div class="section-header text-center fade-up" style="max-width: 800px; margin: 0 auto 4rem;">
+                <h2>Why It Matters</h2>
+                <p>Critical structural information shouldn't be trapped on flat displays.</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-item glass-panel fade-up">
+                    <div class="icon-box">??</div>
+                    <h3>Liberating Spatial Data</h3>
+                    <p>In professional fields, vital information is spatial by nature. Viewing a 3D organ or mechanical part on a 2D screen forces the brain to mentally reconstruct geometry, reducing efficiency and clarity.</p>
+                </div>
+                <div class="value-item glass-panel fade-up" style="animation-delay: 0.1s;">
+                    <div class="icon-box">??</div>
+                    <h3>Unobstructed Vision</h3>
+                    <p>Lixel breaks structural data out of the screen. By creating glasses-free floating visuals, we allow users to interact with and dissect 3D complexity naturally, as if holding the object in their hands.</p>
+                </div>
+                <div class="value-item glass-panel fade-up" style="animation-delay: 0.2s;">
+                    <div class="icon-box">??</div>
+                    <h3>Immediate Consensus</h3>
+                    <p>Whether it's a surgeon explaining a procedure or engineers analyzing a drone path, removing the visual barrier makes communication immediate, learning deeply engaging, and collaboration frictionless.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Vision -->
+    <section class="vision-block">
+        <div class="container fade-up">
+            <div class="badge" style="background: rgba(0,0,0,0.1); border-color: rgba(0,0,0,0.2); color: #000; margin-bottom: 2rem;">Vision</div>
+            <h2 style="margin-bottom: 2rem;">The future is shared spatial decision-making.</h2>
+            <p>We believe the future of communication must move beyond 2D screens. As information complexity grows and AI becomes deeply entangled in how we work, there is a profound need for more intuitive ways to share spatial context.</p>
+            <p style="margin-top: 2rem; font-weight: 500;">Lixel is building the interface where humans and intelligent systems can collaborate, understand, and make critical decisions together, effortlessly, around the exact same 3D content in shared space.</p>
+        </div>
+    </section>
+
+    <!-- 6. Company Profile -->
+    <section style="padding: 8rem 0; background: #08080c;">
+        <div class="container">
+            <div class="split-grid" style="align-items: center;">
+                <div class="split-content fade-up">
+                    <h2>Company Profile</h2>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">Lixel is a technology company focused on redefining how people interact with three-dimensional information.</p>
+                    <p style="margin-bottom: 1.5rem;">We provide integrated hardware and software platforms combining Light Field display, mid-air interaction, and volumetric processing engines. Our solutions currently empower top-tier institutions to overcome physical limitations in spatial comprehension.</p>
+                    <p>We are driven by a singular belief: technology must reduce the cognitive load required to understand complex spatial structures.</p>
+                </div>
+                <div class="profile-grid fade-up" style="animation-delay: 0.2s;">
+                    <div class="profile-card">
+                        <div class="profile-card-icon">??</div>
+                        <div>Medical Education</div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-card-icon">?‘¨?â?ï¸?/div>
+                        <div>Clinical Healthcare</div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-card-icon">??</div>
+                        <div>Aerospace & Defense</div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-card-icon">??</div>
+                        <div>Remote Collaboration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Milestones -->
+    <section style="padding: 6rem 0; background: #040406;">
+        <div class="container fade-up">
+            <h2 class="text-center mb-5">Milestones</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2018</div>
+                    <div class="timeline-content">Lixel was founded to develop glasses-free 3D floating image and mid-air interaction systems.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-content">Core technology and integrated platform development advanced into application validation.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">Lixel gained strong market traction in medical education and highly critical clinical communication scenarios.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2025 and beyond</div>
+                    <div class="timeline-content">Expanding spatial intelligence innovations into advanced professional domains, including defense and aerospace.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CTA -->
+    <section class="vision-section" style="padding: 6rem 0;">
+        <div class="horizon-glow"></div>
+        <div class="container text-center fade-up" style="position:relative; z-index:2;">
+            <h2>Partner with Lixel</h2>
+            <p style="max-width: 600px; margin: 0 auto;">Whether you are exploring new ways to teach, explain, collaborate, or present spatial information, Lixel is ready to help shape the next generation of 3D communication experiences.</p>
+            <div style="margin-top: 3rem;">
+                <a href="contact.html" class="btn btn-primary" style="margin-right: 1rem;">Book a Demo</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Lixel Inc. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
